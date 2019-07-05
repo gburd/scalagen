@@ -1,0 +1,3 @@
+sbt 'set test in Test := {}' clean assembly
+sbt "export runtime:fullClasspath"
+

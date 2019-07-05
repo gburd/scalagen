@@ -96,6 +96,7 @@ class Converter(encoding: String, transformers: List[UnitTransformer]) {
   }
   
   def convertFile(in: File, out: File) {
+    System.out.println(s"${in.getAbsolutePath} -> ${out.getAbsolutePath}")
     try {
       val compilationUnit = JavaParser.parse(in, encoding)
       val sources = toScala(compilationUnit)   
@@ -134,5 +135,15 @@ class Converter(encoding: String, transformers: List[UnitTransformer]) {
       if (file.exists) file :: Nil else Nil
     }
   }
-  
+
+  private def getScalaFiles(file: File): Seq[File] = {
+    if (file.isDirectory) {
+      file.listFiles.toSeq
+        .filter(f => f.isDirectory || f.getName.endsWith(".scala"))
+        .flatMap(f => getJavaFiles(f))
+    } else {
+      if (file.exists) file :: Nil else Nil
+    }
+  }
+
 }

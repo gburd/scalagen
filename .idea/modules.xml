@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/scalagen.iml" filepath="$PROJECT_DIR$/.idea/scalagen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalagen-root.iml" filepath="$PROJECT_DIR$/.idea/modules/scalagen-root.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalagen-root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalagen-root-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalagen-scalagen.iml" filepath="$PROJECT_DIR$/.idea/modules/scalagen-scalagen.iml" />
+    </modules>
+  </component>
+</project>
