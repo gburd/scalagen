@@ -13,14 +13,16 @@
  */
 package com.mysema.scalagen
 
-import java.io.{File, ByteArrayInputStream}
-import com.github.javaparser.JavaParser
-import com.github.javaparser.ast.{ImportDeclaration, CompilationUnit}
-import org.apache.commons.io.FileUtils
+import java.io.{ ByteArrayInputStream, File }
 import java.util.ArrayList
-import com.github.javaparser.ParseException
-import java.io.ByteArrayInputStream
-import java.util.regex.Pattern
+
+import com.github.javaparser.JavaParser
+import com.github.javaparser.ast.{ CompilationUnit, ImportDeclaration }
+import org.apache.commons.io.FileUtils
+
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
+import scala.concurrent.{ Await, Future }
 
 object Converter {
   
@@ -87,28 +89,47 @@ class Converter(encoding: String, transformers: List[UnitTransformer]) {
     
   def convert(inFolder: File, outFolder: File) {
     val inFolderLength = inFolder.getPath.length + 1
-    val inToOut = getJavaFiles(inFolder)
-      .map(in => (in, toOut(inFolderLength, outFolder, in))) 
-      
+    val outFolderLength = outFolder.getPath.length + 1
+    val targetFiles = getFilesWithExtension(inFolder, ".java")
+    val completeFilePaths = getFilesWithExtension(outFolder, ".scala")
+      .map(_.getAbsolutePath.substring(outFolderLength))
+    val remainingFiles = targetFiles
+      .filterNot(file => completeFilePaths.contains(toOut(inFolderLength, outFolder, file).getAbsolutePath.substring(outFolderLength)))
+    val inToOut = remainingFiles
+      .map(file => (file, toOut(inFolderLength, outFolder, file)))
+
     // create out folders
     inToOut.foreach(_._2.getParentFile.mkdirs() )  
-    inToOut.foreach{ case (in,out) => convertFile(in,out) }
+    inToOut.foreach{ case (in,out) => convertFile(in,out, true) }
   }
   
-  def convertFile(in: File, out: File) {
-    System.out.println(s"${in.getAbsolutePath} -> ${out.getAbsolutePath}")
+  def convertFile(in: File, out: File, continueAfterError: Boolean = true) {
+    System.out.print(s"${in.getAbsolutePath} -> ${out.getAbsolutePath}")
     try {
       val compilationUnit = JavaParser.parse(in, encoding)
-      val sources = toScala(compilationUnit)   
-      FileUtils.writeStringToFile(out, sources, "UTF-8")  
+      System.out.print(" .")
+      val sources = toScala(compilationUnit)
+      System.out.print(".")
+      FileUtils.writeStringToFile(out, sources, "UTF-8")
+      System.out.println(".")
     } catch {
-      case e: Exception => throw new RuntimeException("Caught Exception for " + in.getPath, e) 
-    }    
+      case e: Exception =>
+        if (continueAfterError) {
+          System.out.println("")
+          System.out.println(s"Skipping ${in.getPath} due to ${e.getMessage}")
+        } else {
+          throw new RuntimeException("Caught Exception for " + in.getPath, e)
+        }
+    }
   }
   
   def convert(javaSource: String, settings: ConversionSettings = ConversionSettings()): String = {
     val compilationUnit = JavaParser.parse(new ByteArrayInputStream(javaSource.getBytes(encoding)), encoding)
-    toScala(compilationUnit, settings)
+    try {
+      toScala(compilationUnit, settings)
+    } catch {
+      case e: Exception => throw new RuntimeException("Caught Exception", e)
+    }
   }
   
   def toScala(unit: CompilationUnit, settings: ConversionSettings = ConversionSettings()): String = {
@@ -118,7 +139,9 @@ class Converter(encoding: String, transformers: List[UnitTransformer]) {
     val transformed = transformers.foldLeft(unit) { case (u,t) => t.transform(u) }
     val visitor = new ScalaStringVisitor(settings)
     val convertedCode = transformed.accept(visitor, new ScalaStringVisitor.Context())
-    org.scalafmt.Scalafmt.format(convertedCode).get
+
+    runWithTimeout(5) { org.scalafmt.Scalafmt.format(convertedCode).get }
+      .getOrElse(throw new RuntimeException("Scalagen failed."))
   }
   
   private def toOut(inFolderLength: Int, outFolder: File, in: File): File = {
@@ -126,24 +149,18 @@ class Converter(encoding: String, transformers: List[UnitTransformer]) {
     new File(outFolder, in.getPath.substring(inFolderLength, in.getPath.length-offset)+".scala")
   }
   
-  private def getJavaFiles(file: File): Seq[File] = {
+  private def getFilesWithExtension(file: File, ext: String): Seq[File] = {
     if (file.isDirectory) {
       file.listFiles.toSeq
-        .filter(f => f.isDirectory || f.getName.endsWith(".java"))
-        .flatMap(f => getJavaFiles(f))
+        .filter(f => f.isDirectory || f.getName.endsWith(ext))
+        .flatMap(f => getFilesWithExtension(f, ext))
     } else {
       if (file.exists) file :: Nil else Nil
     }
   }
 
-  private def getScalaFiles(file: File): Seq[File] = {
-    if (file.isDirectory) {
-      file.listFiles.toSeq
-        .filter(f => f.isDirectory || f.getName.endsWith(".scala"))
-        .flatMap(f => getJavaFiles(f))
-    } else {
-      if (file.exists) file :: Nil else Nil
-    }
+  def runWithTimeout[T](timeout: Long)(f: => T): Option[T] = {
+    Option(Await.result(Future(f), timeout seconds))
   }
 
 }

@@ -161,7 +161,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
   private def javadocString(javadoc: JavadocComment, arg: Context): String =
     Option(javadoc).map(_.accept(this, arg)).getOrElse("")
 
-  private def withJavaDoc(n: DocumentableNode, arg: Context)(restText: => String = ""): String = {
+  private def withJavadoc(n: DocumentableNode, arg: Context)(restText: => String = ""): String = {
     javadocString(n.getJavaDoc, arg) + restText
   }
 
@@ -174,14 +174,17 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
   def visit(n: CompilationUnit, arg: Context): String = withComments(n, arg) {
     val packageString = Option(n.getPackage).map(_.accept(this, arg)).getOrElse("")
     val importsString = (n.getImports.map(_.accept(this, arg)) ++ Seq(
-      "//remove if not needed",
+      "// TODO(scalagen): remove this import if not needed",
       "import scala.collection.JavaConversions._"
-    ) ++ (if (hasTryWithResources(n)) {
-      Seq("import resource._ //use scala-arm from http://jsuereth.com/scala-arm/")
-    } else
-      Seq()
-      )
-      ).mkString("\n")
+    ) ++ (
+      if (hasTryWithResources(n)) {
+        Seq(
+          "// TODO(scalagen): try-with-resources, replace with scala-arm from http://jsuereth.com/scala-arm/",
+          "import resource._"
+        )
+      } else {
+        Seq()
+      })).mkString("\n")
     val argWithFilteredImport = arg.copy(imports = n.getImports
       .filter(i => !i.isAsterisk && !i.isStatic)
       .map(i => split(i.getName).swap).toMap)
@@ -250,7 +253,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
   }
 
   def visit(n: ClassOrInterfaceDeclaration, arg: Context): String =
-    withJavaDoc(n, arg) {
+    withJavadoc(n, arg) {
       withMemberAnnotations(n, arg) {
         val objectType = if (n.getModifiers.isObject) {
           "object"
@@ -263,8 +266,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
         constructorOption.foreach { c => n.setMembers(n.getMembers.filterNot(_ == c)) }
         val superInvocation: Option[ExplicitConstructorInvocationStmt] = constructorOption.flatMap { cons =>
           cons.getBlock.getStmts
-            .collect({ case x: ExplicitConstructorInvocationStmt => x })
-            .filter(!_.isThis).headOption
+            .collect({ case x: ExplicitConstructorInvocationStmt => x }).find(!_.isThis)
         }
         val superTypes = Seq(
           Option(n.getExtends.asScala),
@@ -303,8 +305,13 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
   def visit(n: EmptyTypeDeclaration, arg: Context): String = javadocString(n.getJavaDoc, arg)
 
   def visit(n: JavadocComment, arg: Context): String = withComments(n, arg) {
-    val comment = StringUtils.split(n.getContent.trim, '\n').map(" " + _.trim).mkString("\n")
-    s"/**\n$comment\n */"
+    n.getContent.count(_ == '\n') match {
+      case 1 if n.getContent.trim.length > 0 =>
+        s"/**${n.getContent.trim}*/"
+      case _ =>
+        val trimmed = StringUtils.split(n.getContent.trim, '\n').map(" " + _.trim).mkString("\n")
+        s"/**\n$trimmed\n*/"
+    }
   }
 
   def visit(n: ClassOrInterfaceType, arg: Context): String = withComments(n, arg) {
@@ -321,6 +328,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
     } else if (n.getScope == null && n.getName == "Array") {
       // TODO : only if Array import is present
       "_Array"
+// TODO:
 //    } else if (PRIMITIVES.contains(n.getName) && (arg.classOf || arg.typeArg)) {
 //      printer.print(PRIMITIVES(n.getName))
     } else {
@@ -368,7 +376,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
 
   def visit(n: FieldDeclaration, arg: Context): String = {
     val argWithType = arg.copy(assignType = n.getType)
-    withJavaDoc(n, argWithType) {
+    withJavadoc(n, argWithType) {
       withComments(n, arg) {
         val modifier = if (ModifierSet.isFinal(n.getModifiers)) "val " else "var "
         val variablesString = n.getVariables.map { v =>
@@ -472,9 +480,9 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
       case Op.remainder => "%"
     }
     s"${n.getLeft.accept(this, arg)} $symbol " + (
-    if (settings.splitLongLines && (stringify(n.getLeft, arg).length > 50 || stringify(n.getRight, arg).length > 50)) {
+    if (settings.splitLongLines && (stringify(n.getLeft, arg).length > settings.lineMaxLength || stringify(n.getRight, arg).length > settings.lineMaxLength)) {
       "\n  "
-    } else "") + n.getRight.accept(this, arg)
+    } else { "" }) + n.getRight.accept(this, arg)
   }
 
   def visit(n: CastExpr, arg: Context): String = withComments(n, arg) {
@@ -844,7 +852,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
   }
 
   def visit(n: BreakStmt, arg: Context): String = withComments(n, arg) {
-    "//break"
+    "// TODO(scalagen): break"
   }
 
   def visit(n: ReturnStmt, arg: Context): String = withComments(n, arg) {
@@ -856,7 +864,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
     }.getOrElse("return")
   }
 
-  def visit(n: EnumDeclaration, arg: Context): String = withJavaDoc(n, arg) {
+  def visit(n: EnumDeclaration, arg: Context): String = withJavadoc(n, arg) {
     val implementsString = Option(n.getImplements).map { impl =>
       " implements " + impl.map(_.accept(this, arg)).mkString(", ")
     }.getOrElse("")
@@ -875,7 +883,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
       "}"
   }
 
-  def visit(n: EnumConstantDeclaration, arg: Context): String = withJavaDoc(n, arg) {
+  def visit(n: EnumConstantDeclaration, arg: Context): String = withJavadoc(n, arg) {
     memberAnnotationsString(n.getAnnotations, arg) +
       n.getName +
       Option(n.getArgs).map(args => argumentsString(args, arg)).getOrElse("") +
@@ -884,7 +892,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
       }.getOrElse("")
   }
 
-  def visit(n: EmptyMemberDeclaration, arg: Context): String = withJavaDoc(n, arg)()
+  def visit(n: EmptyMemberDeclaration, arg: Context): String = withJavadoc(n, arg)()
 
   def visit(n: InitializerDeclaration, arg: Context): String = withComments(n, arg) {
     Option(n.getBlock.getStmts).map { stmts =>
@@ -905,7 +913,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
   }
 
   def visit(n: ContinueStmt, arg: Context): String = withComments(n, arg) {
-    "//continue"
+    "// TODO(scalagen): continue"
   }
 
   def visit(n: DoStmt, arg: Context): String = withComments(n, arg) {
@@ -1026,7 +1034,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
     s"case ${n.getParam.accept(this, arg)} => $catchBlockString\n"
   }
 
-  def visit(n: AnnotationDeclaration, arg: Context): String = withJavaDoc(n, arg) {
+  def visit(n: AnnotationDeclaration, arg: Context): String = withJavadoc(n, arg) {
     memberAnnotationsString(n.getAnnotations, arg) +
       modifiersString(n.getModifiers) +
       "@interface " +
@@ -1036,7 +1044,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
       "}"
   }
 
-  def visit(n: AnnotationMemberDeclaration, arg: Context): String = withJavaDoc(n, arg) {
+  def visit(n: AnnotationMemberDeclaration, arg: Context): String = withJavadoc(n, arg) {
     memberAnnotationsString(n.getAnnotations, arg) +
       modifiersString(n.getModifiers) +
       visitName(n.getName) +

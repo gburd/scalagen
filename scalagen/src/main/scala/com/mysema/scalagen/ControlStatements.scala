@@ -157,16 +157,27 @@ class ControlStatements extends UnitTransformerBase {
       case _ => n
     }    
   }
-  
-  override def visit(nn: SwitchEntry, arg: CompilationUnit) = {    
-    // remove break
+
+  override def visit(nn: Break, arg: CompilationUnit) = {
+    super.visit(nn, arg) match {
+      case parent: For =>
+        val n = super.visit(nn, arg).asInstanceOf[For]
+      case parent: Foreach =>
+        val n = super.visit(nn, arg).asInstanceOf[Foreach]
+// TODO:      case While =>
+      case _ =>
+        nn
+    }
+    nn
+  }
+
+  override def visit(nn: SwitchEntry, arg: CompilationUnit) = {
     val n = super.visit(nn, arg).asInstanceOf[SwitchEntry]
     val size = if (n.getStmts == null) 0 else n.getStmts.size
     if (size > 1 && n.getStmts.get(size-1).isInstanceOf[Break]) {
-      //n.getStmts.remove(size-1)
       n.setStmts(n.getStmts.dropRight(1))
     }
     n
   }
-    
+
 }

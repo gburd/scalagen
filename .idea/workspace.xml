@@ -2,18 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2315f071-d4eb-407e-8d4c-d48842319816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scalagen.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scalagen-maven-plugin/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scalagen/pom.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__ch_qos_logback_logback_classic_1_2_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__ch_qos_logback_logback_core_1_2_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_scala_logging_scala_logging_2_11_3_9_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_2_11_3_2_0_SNAP10_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_2_11_3_2_0_SNAP10_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_26_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_0_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_0_6_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/scalagen-scalagen.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/scalagen-scalagen.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Cli.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Cli.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ConversionSettings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ConversionSettings.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Converter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Converter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Setters.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Setters.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,13 +91,349 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Cli.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+            <state relative-caret-position="585">
+              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#621#640#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Converter.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4719">
+              <caret line="142" column="33" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#618#663#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/Seq.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1287">
+              <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/Seq.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1599">
+              <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/Buffer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1638">
+              <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/ListBuffer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1404">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/immutable/List.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17277">
+              <caret line="452" column="47" selection-start-line="452" selection-start-column="47" selection-end-line="452" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/generic/GenTraversableFactory.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1404">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/TraversableLike.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22464">
+              <caret line="587" column="8" selection-start-line="587" selection-start-column="8" selection-end-line="587" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/TraversableOnce.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11037">
+              <caret line="293" column="24" selection-start-line="293" selection-start-column="24" selection-end-line="293" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/CompilationUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2145">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#2915#2916#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/convert/Wrappers.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3081">
+              <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/Option.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/build.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/commons-io/commons-io/srcs/commons-io-1.3.2-sources.jar!/org/apache/commons/io/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41535">
+              <caret line="1105" column="23" selection-start-line="1105" selection-start-column="23" selection-end-line="1105" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ConverterTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/ContinueStmt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Types.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="247" column="7" selection-start-line="247" selection-start-column="7" selection-end-line="247" selection-end-column="7" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#619#656#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="112" column="57" selection-start-line="112" selection-start-column="57" selection-end-line="112" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/IterableLike.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/BreakStmt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1073">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1753#1754#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/zulu-8-amd64/src.zip!/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+              <folding>
+                <element signature="e#2438#2439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/Statement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ModifierVisitor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="897">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/LabeledStmt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="471" column="35" lean-forward="true" selection-start-line="471" selection-start-column="35" selection-end-line="471" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ConversionSettings.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/IndexedSeqOptimized.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/expr/BinaryExpr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2535">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+              <folding>
+                <element signature="e#2471#2472#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/TryStmt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1950">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+              <folding>
+                <element signature="e#2552#2553#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/visitor/GenericVisitorAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7917">
+              <caret line="269" selection-start-line="269" selection-end-line="269" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/comments/LineComment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/comments/Comment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/comments/JavadocComment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1063">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="e#1748#1749#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,19 +443,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>version</find>
-      <find>scala-plu</find>
-      <find>doc</find>
-      <find>maven-scala-plugin</find>
-      <find>maven-assembly</find>
-      <find>0.2.2</find>
-      <find>repo</find>
-      <find>sourceDir</find>
-      <find>apache</find>
-      <find>com.github.javaparser.</find>
-      <find>japa.parser.</find>
-      <find>AT</find>
-      <find>IMPLEMENTS</find>
       <find>comma</find>
       <find>typeparam</find>
       <find>TypeParameter</find>
@@ -129,6 +460,19 @@
       <find>() {</find>
       <find>(public|private)\W+.*\)\W+\{</find>
       <find>getjavafile</find>
+      <find>protector</find>
+      <find>scalafmt</find>
+      <find>lable</find>
+      <find>&quot;//</find>
+      <find>label</find>
+      <find>javadoccomment</find>
+      <find>break</find>
+      <find>scalate</find>
+      <find>test</find>
+      <find>nn: Br</find>
+      <find>while</find>
+      <find>loop</find>
+      <find>continue</find>
     </findStrings>
     <replaceStrings>
       <replace>com.github.javaparser.</replace>
@@ -142,23 +486,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scalagen/build.sbt" />
         <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scala/BeanUtils.scala" />
         <option value="$PROJECT_DIR$/pom.xml_" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/scalagen-maven-plugin/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ScalaCompilationTest.scala" />
-        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Cli.scala" />
         <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ModifierVisitor.scala" />
         <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Types.scala" />
         <option value="$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/GeneratedJavaParserConstants.java" />
-        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Setters.scala" />
         <option value="$PROJECT_DIR$/scalagen/pom.xml" />
         <option value="$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/ParseException.java" />
         <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Annotations.scala" />
         <option value="$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/ASTParser.java" />
+        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Setters.scala" />
         <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Converter.scala" />
+        <option value="$PROJECT_DIR$/scalagen/build.sbt" />
+        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Cli.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ConversionSettings.scala" />
+        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala" />
+        <option value="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala" />
       </list>
     </option>
   </component>
@@ -192,6 +540,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,12 +554,27 @@
               <item name="scalagen" type="462c0819:PsiDirectoryNode" />
               <item name="scalagen" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="scalagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scalagen" type="462c0819:PsiDirectoryNode" />
+              <item name="scalagen" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scalagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scalagen" type="462c0819:PsiDirectoryNode" />
+              <item name="scalagen" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scalagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,7 +594,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33797586" />
-    <property name="settings.editor.selected.configurable" value="sbt.project.settings.configurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,7 +619,7 @@
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.Cli" />
       <module name="scalagen-scalagen" />
-      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/ws/stasis/stasis-core/src/main/java/com/sleepycat/je /tmp/stasis" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/ws/stasis/stasis-core/src/main/java/com/sleepycat/je $USER_HOME$/ws/stasis/stasis-core/src/main/scala/com/sleepycat/je" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.mysema.scalagen.*" />
@@ -337,7 +702,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/build.sbt" value="3291230058" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="1350420151" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="1396028727" />
         <entry key="$PROJECT_DIR$/project/plugins.sbt" value="2080467200" />
       </map>
@@ -375,18 +740,20 @@
       <workItem from="1562162653951" duration="4947000" />
       <workItem from="1562184165570" duration="1564000" />
       <workItem from="1562185974196" duration="1067000" />
-      <workItem from="1562337159819" duration="929000" />
+      <workItem from="1562337159819" duration="21977000" />
+      <workItem from="1562604897825" duration="5492000" />
+      <workItem from="1562616803135" duration="2624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76193000" />
+    <option name="totallyTimeSpent" value="105357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-72" width="4384" height="2538" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49900728" visible="true" weight="0.16059758" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49900728" weight="0.16059758" />
       <window_info id="Structure" order="1" sideWeight="0.5009927" side_tool="true" weight="0.15406163" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -394,26 +761,26 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Learn" order="7" weight="0.32998943" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" weight="0.32963127" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32963127" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32874277" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.24035874" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.29808974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329148" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32874277" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Elm Compiler" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5004673" side_tool="true" weight="0.329148" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4995327" weight="0.32904086" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4995327" weight="0.32874277" />
       <window_info anchor="bottom" id="Regex Tester" order="15" />
       <window_info anchor="bottom" id="IvyIDEA" order="16" />
-      <window_info anchor="bottom" id="Build" order="17" weight="0.3294849" />
+      <window_info anchor="bottom" id="Build" order="17" weight="0.32918704" />
       <window_info anchor="bottom" id="Java Enterprise" order="18" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="19" weight="0.32963127" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -432,8 +799,8 @@
       <window_info anchor="right" id="CDI" order="15" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49900728" visible="true" weight="0.15406163" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5009927" side_tool="true" visible="true" weight="0.15406163" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49900728" visible="true" weight="0.16059758" />
+      <window_info id="Structure" order="1" sideWeight="0.5009927" side_tool="true" weight="0.15406163" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -441,109 +808,132 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Learn" order="7" weight="0.32998943" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32874277" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.24035874" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32963127" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32874277" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29808974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329148" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32874277" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Elm Compiler" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5004673" side_tool="true" weight="0.329148" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4995327" weight="0.329148" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4995327" weight="0.32874277" />
       <window_info anchor="bottom" id="Regex Tester" order="15" />
       <window_info anchor="bottom" id="IvyIDEA" order="16" />
+      <window_info anchor="bottom" id="Build" order="17" weight="0.32918704" />
+      <window_info anchor="bottom" id="Java Enterprise" order="18" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="19" weight="0.32963127" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.10084034" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.10084034" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Cargo" order="5" weight="0.32983193" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Snyk" order="7" side_tool="true" />
+      <window_info anchor="right" id="Snyk" order="7" side_tool="true" weight="0.32983193" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="make" order="9" />
       <window_info anchor="right" id="SciView" order="10" />
       <window_info anchor="right" id="Palette&#9;" order="11" />
       <window_info anchor="right" id="Theme Preview" order="12" />
-      <window_info anchor="right" id="Elm" order="13" />
+      <window_info anchor="right" id="Elm" order="13" weight="0.32983193" />
+      <window_info anchor="right" id="sbt" order="14" weight="0.22525677" />
+      <window_info anchor="right" id="CDI" order="15" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="scala-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala</url>
+          <line>915</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala</url>
+          <line>309</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="scala-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala</url>
+          <line>212</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala</url>
+          <line>165</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>n.getContent.length</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>n.getContent</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>n</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>n.getRight</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>n.getLeft</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>n.getLeft.accept(this, arg)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>settings.splitLongLines &amp;&amp; (stringify(n.getLeft, arg).length &gt; 50 || stringify(n.getRight, arg).length &gt; 50)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s&quot;${n.getLeft.accept(this, arg)} $symbol</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s&quot;${n.getLeft.accept(this, arg)} $symbol &quot;</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/java/com/sleepycat/je/util/DbCacheSize.java" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scala/CompileTestUtils.scala" />
-    <entry file="jar:///usr/lib/jvm/zulu-8-amd64/src.zip!/java/lang/String.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/javaparser/javaparser/1.0.10/javaparser-1.0.10.jar!/japa/parser/ast/expr/MethodCallExpr.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/javaparser/javaparser/1.0.10/javaparser-1.0.10.jar!/japa/parser/ast/CompilationUnit.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/javaparser/javaparser/1.0.10/javaparser-1.0.10.jar!/japa/parser/JavaParser.class" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaDumpVisitor.scala" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/javaparser/javaparser/1.0.10/javaparser-1.0.10-sources.jar!/japa/parser/JavaParser.java" />
-    <entry file="file://$PROJECT_DIR$/scalagen/LICENSE.txt" />
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/collection/Traversable.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="107" column="15" selection-start-line="107" selection-start-column="15" selection-end-line="107" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scala/BeanUtils.scala" />
-    <entry file="file://$PROJECT_DIR$/pom.xml_" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mysema/scalagen/package.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mysema/scalagen/Annotations.scala" />
-    <entry file="file://$PROJECT_DIR$/scalagen-maven-plugin/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/scalagen/target/test-classes/com/mysema/scalagen/ScalaCompilationTest.class" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ScalaCompilationTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen-maven-plugin/src/main/java/com/mysema/scalagen/ScalagenTestMojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-337">
-          <folding>
-            <element signature="e#0#1621#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen-maven-plugin/src/main/java/com/mysema/scalagen/ScalagenMojo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Types.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#619#656#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/UnitTransformer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/github.javaparser/ast/visitor/ModifierVisitorAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/ast/TypeParameter.java" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/GeneratedJavaParserConstants.java" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/ParseException.java" />
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/JavaParser.java" />
     <entry file="file://$PROJECT_DIR$/scalagen/src/main/java/com/github/javaparser/ASTParser.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml" />
     <entry file="file://$PROJECT_DIR$/scalagen/pom.xml" />
@@ -554,13 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ModifierVisitor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19422">
-          <caret line="511" column="6" selection-start-line="511" selection-start-column="6" selection-end-line="511" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Annotations.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -568,19 +951,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/build.sbt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Setters.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -608,23 +978,335 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Converter.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalameta/parsers_2.11/srcs/parsers_2.11-1.3.0-sources.jar!/scala/meta/internal/parsers/Reporter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="89" column="29" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="29" />
+        <state relative-caret-position="546">
+          <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Setters.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/AbstractParserTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="47" column="101" selection-start-line="47" selection-start-column="101" selection-end-line="47" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/test/scala29/scala/com/mysema/scalagen/AbstractParserTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="45" column="101" selection-start-line="45" selection-start-column="101" selection-end-line="45" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Cli.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        <state relative-caret-position="585">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#621#640#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Converter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4719">
+          <caret line="142" column="33" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#618#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/Seq.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1287">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/Seq.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1599">
+          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/Buffer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/ListBuffer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/immutable/List.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17277">
+          <caret line="452" column="47" selection-start-line="452" selection-start-column="47" selection-end-line="452" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/generic/GenTraversableFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/TraversableLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22464">
+          <caret line="587" column="8" selection-start-line="587" selection-start-column="8" selection-end-line="587" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/TraversableOnce.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11037">
+          <caret line="293" column="24" selection-start-line="293" selection-start-column="24" selection-end-line="293" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/CompilationUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#2915#2916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/convert/Wrappers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3081">
+          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/Option.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/build.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/commons-io/commons-io/srcs/commons-io-1.3.2-sources.jar!/org/apache/commons/io/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41535">
+          <caret line="1105" column="23" selection-start-line="1105" selection-start-column="23" selection-end-line="1105" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ConverterTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/ContinueStmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/LabeledStmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/IndexedSeqOptimized.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/expr/BinaryExpr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#2471#2472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/TryStmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#2552#2553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/visitor/GenericVisitorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7917">
+          <caret line="269" selection-start-line="269" selection-end-line="269" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/comments/LineComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/comments/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/zulu-8-amd64/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <element signature="e#2438#2439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/stmt/BreakStmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ModifierVisitor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.github.javaparser/javaparser-core/srcs/javaparser-core-2.5.1-sources.jar!/com/github/javaparser/ast/comments/JavadocComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1063">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ConversionSettings.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/zulu-8-amd64/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1209">
+          <caret line="2866" column="18" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
+          <folding>
+            <element signature="e#24069#24070#0" expanded="true" />
+            <element signature="e#24109#24110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/Types.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="247" column="7" selection-start-line="247" selection-start-column="7" selection-end-line="247" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#619#656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="112" column="57" selection-start-line="112" selection-start-column="57" selection-end-line="112" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/IterableLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="471" column="35" lean-forward="true" selection-start-line="471" selection-start-column="35" selection-end-line="471" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -36,9 +36,9 @@ class Setters extends UnitTransformerBase {
   override def visit(nn: MethodCall, arg: CompilationUnit): Node = {
     // replaces setter invocations with field access
     val n = super.visit(nn, arg).asInstanceOf[MethodCall]
-    if (n.getName.startsWith("set") &&
+    if ((n.getName.startsWith("set") && (n.getName.length > 3)) &&
         (n.getScope == null || n.getScope.isInstanceOf[This]) &&
-        n.getArgs.size == 1) {
+        (n.getArgs != null && n.getArgs.size == 1)) {
       val scope = if (n.getScope != null) n.getScope else thisExpr
       new Assign(
           new FieldAccess(scope, setterToField(n.getName)),
@@ -48,6 +48,5 @@ class Setters extends UnitTransformerBase {
       n
     }
   }
-  
-    
+
 }

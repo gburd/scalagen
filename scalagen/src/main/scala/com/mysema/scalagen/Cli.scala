@@ -14,6 +14,11 @@
 package com.mysema.scalagen
 
 import java.io.File
+import ch.qos.logback.classic.encoder.PatternLayoutEncoder
+import ch.qos.logback.classic.spi.ILoggingEvent
+import ch.qos.logback.classic.{ Level, LoggerContext }
+import ch.qos.logback.core.ConsoleAppender
+import org.slf4j.LoggerFactory
 
 /**
  * Simple harness to facilitate running scalagen from the command line
@@ -22,6 +27,7 @@ object Cli {
   val usage = "USAGE: scalagen <src-directory> <target-directory>"
 
   def main(args: Array[String]) {
+    val logger = createLoggerFor("ldap-test")
     if (args.length != 2) {
       println(usage)
       return
@@ -33,4 +39,25 @@ object Cli {
       Converter.instance.convert(in, out)
     }
   }
+
+  def createLoggerFor(string: String, file: Option[String] = None): ch.qos.logback.classic.Logger = {
+    val ple = new PatternLayoutEncoder()
+    val lc = LoggerFactory.getILoggerFactory().asInstanceOf[LoggerContext]
+    ple.setPattern("%date %level [%thread] %logger{10} [%file:%line]\t%msg%n")
+    ple.setContext(lc)
+    ple.start()
+
+    val appender = new ConsoleAppender[ILoggingEvent]()
+    appender.setEncoder(ple)
+    appender.setContext(lc)
+    appender.start()
+
+    val logger = LoggerFactory.getLogger(string).asInstanceOf[ch.qos.logback.classic.Logger]
+    logger.addAppender(appender)
+    logger.setLevel(Level.DEBUG)
+    logger.setAdditive(false)
+
+    logger
+  }
+
 }
