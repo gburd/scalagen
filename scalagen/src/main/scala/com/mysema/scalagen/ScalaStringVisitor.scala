@@ -57,15 +57,15 @@ object ScalaStringVisitor {
       PrimitiveType.Primitive.Long -> "0l",
       PrimitiveType.Primitive.Short -> "0.0")
   case class Context(
-    val arrayAccess: Boolean = false,
-    val classOf: Boolean = false,
-    var skip: Boolean = false,
-    val assignType: Type = null,
-    val inObjectEquals: Boolean = false,
-    val returnOn: Boolean = false,
-    val typeArg: Boolean = false,
-    val imports: Map[String, String] = Map[String, String](),
-    val mustWrap: Boolean = false
+    arrayAccess: Boolean = false,
+    classOf: Boolean = false,
+    skip: Boolean = false,
+    assignType: Type = null,
+    inObjectEquals: Boolean = false,
+    returnOn: Boolean = false,
+    typeArg: Boolean = false,
+    imports: Map[String, String] = Map[String, String](),
+    mustWrap: Boolean = false
   )
 }
 
@@ -167,7 +167,18 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
 
   private def withComments(n: Node, arg: Context)(restText: => String = ""): String = {
     val commentBefore = Option(n.getComment).map(_.accept(this, arg))
-    val commentsAfter = n.getOrphanComments.map(_.accept(this, arg))
+    val commentsAfter = n.getOrphanComments match {
+      case comments if !comments.isEmpty =>
+        val numBooleanArgs = n.getChildrenNodes.toSeq.collect {
+          case o: MethodCallExpr if o.isInstanceOf[MethodCallExpr] =>
+            o.getArgs.count(_.isInstanceOf[BooleanLiteralExpr])
+        }.sum
+        if (numBooleanArgs == comments.length) // When in Java the comment is the name of the boolean argument to a function.
+          None
+        else
+          Option(comments.map(_.accept(this, arg)).mkString("\n"))
+      case _ => None
+    }
     (commentBefore.toSeq ++ Seq(restText) ++ commentsAfter).mkString("\n")
   }
 
@@ -479,10 +490,7 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
       case Op.divide => "/"
       case Op.remainder => "%"
     }
-    s"${n.getLeft.accept(this, arg)} $symbol " + (
-    if (settings.splitLongLines && (stringify(n.getLeft, arg).length > settings.lineMaxLength || stringify(n.getRight, arg).length > settings.lineMaxLength)) {
-      "\n  "
-    } else { "" }) + n.getRight.accept(this, arg)
+    s"${n.getLeft.accept(this, arg)} $symbol ${n.getRight.accept(this, arg)}"
   }
 
   def visit(n: CastExpr, arg: Context): String = withComments(n, arg) {
@@ -837,9 +845,8 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
     } else {
       "case " + Option(n.getLabel).map(_.accept(this, arg)).getOrElse("_")
     }
-    arg.skip = n.getStmts == null || n.getStmts.size() == 0
     val resultExpr =
-      if (!arg.skip) {
+      if (!(n.getStmts == null || n.getStmts.size() == 0)) {
         " => " +
           (if (n.getStmts.size == 1) {
             n.getStmts.get(0).accept(this, arg)

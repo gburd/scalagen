@@ -36,8 +36,6 @@ object UnitTransformer extends Helpers with Types {
   
   private def safeToString(obj: AnyRef): String = if (obj != null) obj.toString else null
             
-  //val BOOLEAN_BEAN_PROPERTY_IMPORT = new Import("scala.reflect.BooleanBeanProperty", false, false)
-  
   val BEAN_PROPERTY = new MarkerAnnotation("BeanProperty")
   
   val BOOLEAN_BEAN_PROPERTY = new MarkerAnnotation("BooleanBeanProperty")

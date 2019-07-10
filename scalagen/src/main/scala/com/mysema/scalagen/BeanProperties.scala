@@ -25,7 +25,8 @@ import UnitTransformer._
 class BeanProperties(targetVersion: ScalaVersion) extends UnitTransformerBase with BeanHelpers {
   
   val BEAN_PROPERTY_IMPORT =
-    if (targetVersion >= Scala210) new Import("scala.beans.{BeanProperty, BooleanBeanProperty}", false, false)
+    if (targetVersion >= Scala210) new Import("scal" +
+      "a.beans.{BeanProperty, BooleanBeanProperty}", false, false)
     else new Import("scala.reflect.{BeanProperty, BooleanBeanProperty}", false, false)
      
   def transform(cu: CompilationUnit): CompilationUnit = {

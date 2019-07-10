@@ -12,6 +12,10 @@ case object Scala210 extends ScalaVersion(1)
 
 case object Scala211 extends ScalaVersion(2)
 
+case object Scala212 extends ScalaVersion(3)
+
+case object Scala213 extends ScalaVersion(4)
+
 object ScalaVersion {
   lazy val current = {
     //we can't use ScalaProperties.scalaVersionNumber because it's new in 2.10
@@ -23,6 +27,8 @@ object ScalaVersion {
     if (versionNumberString.startsWith("2.9.")) Scala29
     else if (versionNumberString.startsWith("2.10.")) Scala210
     else if (versionNumberString.startsWith("2.11.")) Scala211
+    else if (versionNumberString.startsWith("2.12.")) Scala212
+    else if (versionNumberString.startsWith("2.13.")) Scala213
     else throw new IllegalArgumentException("Unsupported scala version: " + versionNumberString)
   }
 }
