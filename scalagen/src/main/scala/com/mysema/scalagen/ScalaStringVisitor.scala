@@ -576,7 +576,12 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
       scope.accept(this, arg) + (if ((shortForm && args == 1)) " " else ".")
     }.getOrElse("")
     val methodName = if (METHOD_REPLACEMENTS.contains(n.getName)) {
-      METHOD_REPLACEMENTS(n.getName)
+      if (scopeString ==  (if ((shortForm && args == 1)) "super " else "super.")) {
+        // TODO(gburd): should this case be "eq" or Scala '=='?
+        METHOD_REPLACEMENTS(n.getName)
+      } else {
+        METHOD_REPLACEMENTS(n.getName)
+      }
     } else {
       visitName(n.getName)
     }
