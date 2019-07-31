@@ -370,7 +370,8 @@ class ScalaStringVisitor(settings: ConversionSettings) extends GenericVisitor[St
 
   def visit(n: ReferenceType, arg: Context): String = withComments(n, arg) {
     val adaptedArg = if(n.getArrayCount > 0) arg.copy(typeArg = true) else arg
-    val prefix = "Array[" * n.getArrayCount
+    val arrayOrSeq = if (ScalaVersion.current < Scala211) "Array" else "Seq"
+    val prefix = s"$arrayOrSeq[" * n.getArrayCount
     val postFix = "]" * n.getArrayCount
     s"$prefix${n.getType.accept(this, adaptedArg)}$postFix"
   }

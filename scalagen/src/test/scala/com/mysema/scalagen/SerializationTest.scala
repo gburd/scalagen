@@ -119,8 +119,10 @@ class SerializationTest extends AbstractParserTest {
 
   @Test
   def Constructors {
+    val regex = """/\*(\*(?!/)|[^*])*\*/""".r
     val sources = toScala[com.mysema.examples.Constructors]
-    assertContains(sources, "class Constructors(first: String, last: String) {")
+    val cleanSources = regex.replaceAllIn(sources, "").replace("\n\n", "\n")
+    assertContains(cleanSources, "class Constructors(first: String, last: String) {")
   }
 
   @Test

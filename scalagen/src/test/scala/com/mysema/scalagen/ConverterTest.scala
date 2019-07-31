@@ -30,6 +30,8 @@ class ConverterTest extends AbstractParserTest {
   @Test
   def Convert_Creates_File_with_Content {
     Converter.instance.convert(new File(SCALA_TEST_DIR_NAME), new File("target/test2/scala"))
+    //val currentDirectory = new java.io.File(".").getCanonicalPath
+    //Converter.instance.convert(new File(currentDirectory), new File("target/test2/scala"))
     assertTrue(new File("target/test2/scala/com/mysema/examples/Bean.scala").length > 0)
   }
 

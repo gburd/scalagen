@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2315f071-d4eb-407e-8d4c-d48842319816" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/scalagen-root-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/scalagen-root-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/examples/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/examples/Control.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/examples/SwitchCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/examples/SwitchCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ConverterTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ConverterTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ScalaVersionTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/ScalaVersionTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/SerializationTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/SerializationTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/TestDirectoryStructure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scalagen/TestDirectoryStructure.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,14 +135,59 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in scalagen-scalagen">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cli" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Cli - humio/com.nc.tsa" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.Cli" />
+      <module name="scalagen-scalagen" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/ws/humio/src/main/java/com/nc/tsa $USER_HOME$/ws/humio/src/main/scala/com/nc/tsa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mysema.scalagen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cli - humio/etherip.util" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.Cli" />
+      <module name="scalagen-scalagen" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/ws/humio/src/main/java/etherip/util $USER_HOME$/ws/humio/src/main/scala/etherip/util" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mysema.scalagen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cli - libcrunch/main" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.Cli" />
+      <module name="scalagen-scalagen" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/../libcrunch/src/main/java/com/twitter/crunch $PROJECT_DIR$/../libcrunch/src/main/scala/com/twitter/crunch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mysema.scalagen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cli - stasis/main" type="Application" factoryName="Application">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.Cli" />
       <module name="scalagen-scalagen" />
@@ -153,8 +202,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Cli - stasis/test" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.Cli" />
+      <module name="scalagen-scalagen" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/ws/stasis/stasis-test/src/test/java/com/sleepycat/je $USER_HOME$/ws/stasis/stasis-test/src/test/scala/com/sleepycat/je" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mysema.scalagen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in scalagen-scalagen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scalagen-scalagen" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scalagen-scalagen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mysema.scalagen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mysema.scalagen" />
+      <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.ConverterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SerializationTest.Constructors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scalagen-scalagen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mysema.scalagen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mysema.scalagen" />
+      <option name="MAIN_CLASS_NAME" value="com.mysema.scalagen.SerializationTest" />
+      <option name="METHOD_NAME" value="Constructors" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,9 +290,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Cli - stasis/test" />
+      <item itemvalue="Application.Cli - humio/com.nc.tsa" />
+      <item itemvalue="Application.Cli - humio/etherip.util" />
+      <item itemvalue="Application.Cli - stasis/main" />
+      <item itemvalue="Application.Cli - libcrunch/main" />
+      <item itemvalue="JUnit.ConverterTest" />
+      <item itemvalue="JUnit.All in scalagen-scalagen" />
+      <item itemvalue="JUnit.SerializationTest.Constructors" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Cli" />
+        <item itemvalue="JUnit.All in scalagen-scalagen" />
+        <item itemvalue="JUnit.SerializationTest.Constructors" />
+        <item itemvalue="JUnit.ConverterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +389,10 @@
       <workItem from="1562791213797" duration="1132000" />
       <workItem from="1564190135966" duration="2828000" />
       <workItem from="1564193253406" duration="13105000" />
+      <workItem from="1564494782508" duration="1551000" />
+      <workItem from="1564505547318" duration="588000" />
+      <workItem from="1564506217500" duration="1154000" />
+      <workItem from="1564516807735" duration="13255000" />
     </task>
     <task id="LOCAL-00001" summary="Fixes">
       <created>1562619565005</created>
@@ -323,7 +445,7 @@
       <breakpoints>
         <line-breakpoint type="scala-line">
           <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ScalaStringVisitor.scala</url>
-          <line>927</line>
+          <line>928</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
@@ -345,6 +467,16 @@
           <url>file://$PROJECT_DIR$/scalagen/src/main/scala/com/mysema/scalagen/ControlStatements.scala</url>
           <line>165</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/scala/CompileTestUtils.scala</url>
+          <line>48</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/scalagen/src/test/scala/com/mysema/examples/ArrayConstructorExpression.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

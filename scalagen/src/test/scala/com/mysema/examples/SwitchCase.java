@@ -14,7 +14,7 @@ public class SwitchCase {
     public void run2() {
         int i = hashCode();
         switch (i) {
-        case 0: 
+//TODO        case 0:
         case 1: System.out.println(1);
         default: System.out.println(i);
         }

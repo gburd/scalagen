@@ -16,7 +16,8 @@ public class Control {
         int i = 0;
         while (i < integers.size()) {
             System.err.println(integers.get(i));
-            i++;
+            //TODO i++;
+            i = i + 1;
         }
     }
     
